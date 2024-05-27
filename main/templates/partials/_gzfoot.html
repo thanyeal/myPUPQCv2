@@ -1,0 +1,71 @@
+{% load static %}
+
+    <style>
+        .foot-span {
+            font-size: 10pt;
+            color: gray !important;
+        }
+        .ul-gaz {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-size: 9pt;
+        }
+        .henx {
+            color: gray !important;
+        }
+    </style>
+
+    <footer id="footer" style="background-color:#0e1111 !important;">
+        <div class="container d-md-flex py-4">
+            <div class="me-lg-auto text-right text-md-right">
+                <div class="row">
+                    <div class="col-auto">
+                        <img src="{% static 'img/gazette.png' %}" style="max-width:150px;" alt="Republic of the Philippines">
+                    </div>
+                    <div class="col py-2">
+                        <div class="copyright">
+                            <span class="foot-span">Republic of the Philippines</span>
+                        </div>
+                        <div class="credits pt-3">
+                            <span class="foot-span">All content is in the public domain unless<br/> otherwise stated.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="me-lg-auto text-right text-md-right">
+                <div class="row" style="margin-left:40px !important;">
+                    <div class="col py-2">
+                        <div class="copyright">
+                            <span class="foot-span">About GOVPH</span>
+                        </div>
+                        <div class="credits pt-3">
+                            <span class="foot-span">Learn more about the Philippine government, its<br/>structure, how government works and the people<br/>behind it.</span>
+                        </div>
+                        <ul class="ul-gaz mt-3">
+                            <li><a class="henx" href="http://www.gov.ph/">Official Gazette</></li>
+                            <li style="margin-top: 4pt;"><a class="henx" href="http://data.gov.ph/">Open Data Portal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="me-lg-auto text-right text-md-right">
+                <div class="row" style="margin-left:40px !important;">
+                    <div class="col py-2">
+                        <div class="copyright">
+                            <span class="foot-span">Government Links</span>
+                        </div>
+                        <ul class="ul-gaz mt-3">
+                            <li style="margin-top: 4pt;"><a class="henx" href="http://president.gov.ph/">Office of the President</a></li>
+                            <li style="margin-top: 4pt;"><a class="henx" href="http://ovp.gov.ph/">Office of the Vice President</a></li>
+                            <li style="margin-top: 4pt;"><a class="henx" href="http://www.senate.gov.ph/">Senate of the Philippines</a></li>
+                            <li style="margin-top: 4pt;"><a class="henx" href="http://www.congress.gov.ph/">House of Representatives</a></li>
+                            <li style="margin-top: 4pt;"><a class="henx" href="http://sc.judiciary.gov.ph/">Supreme Court</a></li>
+                            <li style="margin-top: 4pt;"><a class="henx" href="http://ca.judiciary.gov.ph/">Court of Appeals</a></li>
+                            <li style="margin-top: 4pt;"><a class="henx" href="http://sb.judiciary.gov.ph/">Sandiganbayan</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>

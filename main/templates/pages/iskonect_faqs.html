@@ -1,0 +1,76 @@
+{% load static %}
+
+    <div id="section_faqs"></div>
+
+    <div class="breadcrumbs" data-aos="fade-in">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+    </div>
+    <section id="courses" class="courses">  
+        <style>
+            .faq-header {
+                background-color: #ffe8e8;
+                color: white;
+                cursor: pointer;
+                transition: background-color 0.6s ease;
+                border: none !important;
+            }
+            .faq-header .toggle-icon {
+                float: right;
+                transition: transform 0.6s ease;
+            }
+            .faq-header.collapsed .toggle-icon {
+                transform: rotate(180deg);
+            }
+            .faq-header.active {
+                background-color: #880000 !important;
+            }
+            .fade-in {
+                animation: fadeIn 1s ease-in-out;
+            }
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            .xcard {
+                height: 100px;
+                width: 100%%;
+            }
+        </style>
+
+        <div class="container my-5 fade-in">
+            <div id="faqAccordion">
+                <div class="card">
+                    <div class=" xcard card-header faq-header" id="faqHeading1" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                    <p class="py-4 mt-2 mb-0 text-start" style="margin-left: 30px; color: #000000 !important;">
+                        What is myPUPQC?
+                        <span class="toggle-icon down-arrow">&darr;</span>
+                    </p>
+                    </div>
+                    <div id="faqCollapse1" class="collapse" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
+                        <div class="card-body py-4">
+                            myPUPQC is a dedicated platform offering a wide range of services exclusively for the Polytechnic University of the Philippines Quezon City (PUPQC) community.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#faqAccordion').on('show.bs.collapse', function (e) {
+                    $(e.target).prev('.faq-header').addClass('active').find('.toggle-icon').html('&uarr;');
+                }).on('hide.bs.collapse', function (e) {
+                    $(e.target).prev('.faq-header').removeClass('active').find('.toggle-icon').html('&darr;');
+                });
+            });
+        </script>
+    </section>
