@@ -6,3 +6,70 @@
     <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
     <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var activeClass = 'active';
+            var sections = [
+                { id: 'sct-h', section: '#section_home' },
+                { id: 'sct-a', section: '#section_about' },
+                { id: 'sct-s', section: '#section_services' },
+                { id: 'sct-f', section: '#section_faqs' },
+                { id: 'sct-c', section: '#section_contact' }
+            ];
+    
+            function setActiveLink() {
+                var currentURL = window.location.href;
+    
+                sections.forEach(function (item) {
+                    var link = document.getElementById(item.id);
+                    if (link) {
+                        if (currentURL.includes(item.section)) {
+                            link.classList.add(activeClass);
+                        } else {
+                            link.classList.remove(activeClass);
+                        }
+                    }
+                });
+            }
+    
+            function setActiveOnScroll() {
+                var scrollPos = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+    
+                sections.forEach(function (item) {
+                    var sectionElement = document.querySelector(item.section);
+                    var link = document.getElementById(item.id);
+    
+                    if (sectionElement) {
+                        var sectionTop = sectionElement.offsetTop;
+                        var sectionHeight = sectionElement.offsetHeight;
+    
+                        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                            link.classList.add(activeClass);
+                        } else {
+                            link.classList.remove(activeClass);
+                        }
+                    }
+                });
+            }
+    
+            // Set active link based on URL hash initially
+            setActiveLink();
+    
+            // Update active link on scroll
+            window.addEventListener('scroll', function () {
+                setActiveOnScroll();
+            });
+    
+            // Update active link on hash change
+            window.addEventListener('hashchange', function () {
+                setActiveLink();
+            });
+    
+            // Update active link on page load with hash
+            if (window.location.hash) {
+                setActiveLink();
+            }
+        });
+    </script>
+    

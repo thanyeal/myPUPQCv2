@@ -1,76 +1,193 @@
 {% load static %}
 
-    <div id="section_faqs"></div>
-
-    <div class="breadcrumbs" data-aos="fade-in">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-        </div>
-    </div>
-    <section id="courses" class="courses">  
-        <style>
-            .faq-header {
-                background-color: #ffe8e8;
-                color: white;
-                cursor: pointer;
-                transition: background-color 0.6s ease;
-                border: none !important;
-            }
-            .faq-header .toggle-icon {
-                float: right;
-                transition: transform 0.6s ease;
-            }
-            .faq-header.collapsed .toggle-icon {
-                transform: rotate(180deg);
-            }
-            .faq-header.active {
-                background-color: #880000 !important;
-            }
-            .fade-in {
-                animation: fadeIn 1s ease-in-out;
-            }
-            @keyframes fadeIn {
-                0% {
-                    opacity: 0;
-                }
-                100% {
-                    opacity: 1;
-                }
-            }
-            .xcard {
-                height: 100px;
-                width: 100%%;
-            }
-        </style>
-
-        <div class="container my-5 fade-in">
-            <div id="faqAccordion">
-                <div class="card">
-                    <div class=" xcard card-header faq-header" id="faqHeading1" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                    <p class="py-4 mt-2 mb-0 text-start" style="margin-left: 30px; color: #000000 !important;">
-                        What is myPUPQC?
-                        <span class="toggle-icon down-arrow">&darr;</span>
-                    </p>
-                    </div>
-                    <div id="faqCollapse1" class="collapse" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
-                        <div class="card-body py-4">
-                            myPUPQC is a dedicated platform offering a wide range of services exclusively for the Polytechnic University of the Philippines Quezon City (PUPQC) community.
-                        </div>
-                    </div>
-                </div>
+    <section id="section_faqs" class="pt-0">
+        <div class="breadcrumbs" data-aos="fade-in">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
             </div>
         </div>
-        
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('#faqAccordion').on('show.bs.collapse', function (e) {
-                    $(e.target).prev('.faq-header').addClass('active').find('.toggle-icon').html('&uarr;');
-                }).on('hide.bs.collapse', function (e) {
-                    $(e.target).prev('.faq-header').removeClass('active').find('.toggle-icon').html('&darr;');
+        <div id="courses" class="courses">  
+            <style>
+                .faq-header {
+                    background-color: #fff2f2;
+                    color: white;
+                    cursor: pointer;
+                    transition: background-color 0.6s ease;
+                    border: none !important;
+                }
+                .faq-header .toggle-icon {
+                    float: right;
+                    transition: transform 0.6s ease;
+                }
+                .faq-header.collapsed .toggle-icon {
+                    transform: rotate(0deg);
+                }
+                .faq-header.active .toggle-icon {
+                    transform: rotate(180deg);
+                }
+                .faq-header.active {
+                    background-color: #880000;
+                }
+                .faq-header.active p {
+                    color: white !important;
+                }
+                .fade-in {
+                    animation: fadeIn 1s ease-in-out;
+                }
+                @keyframes fadeIn {
+                    0% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+                .xcard {
+                    height: 100px;
+                    width: 100%;
+                }
+            </style>
+            <div class="container my-5 fade-in">
+                <div id="faqAccordion">
+                    <div id="accord-1" class="pb-4">
+                        <div class="card" style="border-radius: 0.6rem;">
+                            <div class="card-header faq-header" id="faqHeading1" data-toggle="collapse" data-target="#drop-1" aria-expanded="true" aria-controls="drop-1">
+                                <p class="py-4 mt-2 mb-0 text-start" style="margin-left: 30px; color: #000000;">
+                                    What is myPUPQC?
+                                    <span class="toggle-icon"><i class="bi bi-chevron-down"></i></span>
+                                </p>
+                            </div>
+                            <div id="drop-1" class="collapse" aria-labelledby="faqHeading1" data-parent="#accord-1">
+                                <div class="card-body py-4 mt-3 mb-3">
+                                    MyPUPQC is a campus-specific website catered to the PUPQC community more specifically between PUPQC administrators, faculty, and all iskolar ng bayan enrolled in the campus. 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="accord-2" class="py-4">
+                        <div class="card" style="border-radius: 0.6rem;">
+                            <div class="card-header faq-header" id="faqHeading1" data-toggle="collapse" data-target="#drop-2" aria-expanded="true" aria-controls="drop-2">
+                                <p class="py-4 mt-2 mb-0 text-start" style="margin-left: 30px; color: #000000;">
+                                    What services are available in myPUPQC Portal?
+                                    <span class="toggle-icon"><i class="bi bi-chevron-down"></i></span>
+                                </p>
+                            </div>
+                            <div id="drop-2" class="collapse" aria-labelledby="faqHeading1" data-parent="#accord-2">
+                                <div class="card-body py-4 mt-3 mb-3">
+                                    myPUPQC offers a variety of services tailored to the needs of the PUPQC community, including but not limited to academic resources, extension services tools, administrative services, and professional development opportunities.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="accord-3" class="py-4">
+                        <div class="card" style="border-radius: 0.6rem;">
+                            <div class="card-header faq-header" id="faqHeading1" data-toggle="collapse" data-target="#drop-3" aria-expanded="true" aria-controls="drop-3">
+                                <p class="py-4 mt-2 mb-0 text-start" style="margin-left: 30px; color: #000000;">
+                                    Where can I find the systems in myPUPQC?
+                                    <span class="toggle-icon"><i class="bi bi-chevron-down"></i></span>
+                                </p>
+                            </div>
+                            <div id="drop-3" class="collapse" aria-labelledby="faqHeading1" data-parent="#accord-3">
+                                <div class="card-body py-4 mt-3 mb-3">
+                                    You can find the systems within myPUPQC by navigating to the Services section. There, you'll find a list of available systems that you can access according to your needs. Simply click on the system you wish to use, and you'll be directed to the respective platform.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="accord-4" class="py-4">
+                        <div class="card" style="border-radius: 0.6rem;">
+                            <div class="card-header faq-header" id="faqHeading1" data-toggle="collapse" data-target="#drop-4" aria-expanded="true" aria-controls="drop-4">
+                                <p class="py-4 mt-2 mb-0 text-start" style="margin-left: 30px; color: #000000;">
+                                    Who can access myPUPQC information systems?
+                                    <span class="toggle-icon"><i class="bi bi-chevron-down"></i></span>
+                                </p>
+                            </div>
+                            <div id="drop-4" class="collapse" aria-labelledby="faqHeading1" data-parent="#accord-4">
+                                <div class="card-body py-4 mt-3 mb-3">
+                                    myPUPQC is accessible to everyone within the PUPQC community, including students, faculty, and campus administrators. Additionally, myPUPQC is also accessible to alumni, beneficiaries, and others who are part of or willing to be part of PUPQC.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="accord-5" class="py-4">
+                        <div class="card" style="border-radius: 0.6rem;">
+                            <div class="card-header faq-header" id="faqHeading1" data-toggle="collapse" data-target="#drop-5" aria-expanded="true" aria-controls="drop-5">
+                                <p class="py-4 mt-2 mb-0 text-start" style="margin-left: 30px; color: #000000;">
+                                    How do I reset my password if I forget it?
+                                    <span class="toggle-icon"><i class="bi bi-chevron-down"></i></span>
+                                </p>
+                            </div>
+                            <div id="drop-5" class="collapse" aria-labelledby="faqHeading1" data-parent="#accord-5">
+                                <div class="card-body py-4 mt-3 mb-3">
+                                    You can reset your password by clicking on the "Forgot Password" link on the login page of the system you’re trying to accesss once you entered your password incorrectly. And then, follow the instructions provided by the portal such as resetting your password through email verification.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="accord-6" class="py-4">
+                        <div class="card" style="border-radius: 0.6rem;">
+                            <div class="card-header faq-header" id="faqHeading1" data-toggle="collapse" data-target="#drop-6" aria-expanded="true" aria-controls="drop-6">
+                                <p class="py-4 mt-2 mb-0 text-start" style="margin-left: 30px; color: #000000;">
+                                    Can I access specific systems within myPUPQC?
+                                    <span class="toggle-icon"><i class="bi bi-chevron-down"></i></span>
+                                </p>
+                            </div>
+                            <div id="drop-6" class="collapse" aria-labelledby="faqHeading1" data-parent="#accord-6">
+                                <div class="card-body py-4 mt-3 mb-3">
+                                    Yes, depending on your role within the university community, you may have access to specific systems within myPUPQC tailored to your needs.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="accord-7" class="py-4">
+                        <div class="card" style="border-radius: 0.6rem;">
+                            <div class="card-header faq-header" id="faqHeading1" data-toggle="collapse" data-target="#drop-7" aria-expanded="true" aria-controls="drop-7">
+                                <p class="py-4 mt-2 mb-0 text-start" style="margin-left: 30px; color: #000000;">
+                                    What should I do if I need to contact the university regarding my inquiry?
+                                    <span class="toggle-icon"><i class="bi bi-chevron-down"></i></span>
+                                </p>
+                            </div>
+                            <div id="drop-7" class="collapse" aria-labelledby="faqHeading1" data-parent="#accord-7">
+                                <div class="card-body py-4 mt-3 mb-3">
+                                    If you have an inquiry and in need to contact the university using a hotline, please refer to the contact us section of the myPUPQC portal for further assistance.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="accord-8" class="py-4">
+                        <div class="card" style="border-radius: 0.6rem;">
+                            <div class="card-header faq-header" id="faqHeading1" data-toggle="collapse" data-target="#drop-8" aria-expanded="true" aria-controls="drop-8">
+                                <p class="py-4 mt-2 mb-0 text-start" style="margin-left: 30px; color: #000000;">
+                                    What should I do if I encounter technical issues while using myPUPQC?
+                                    <span class="toggle-icon"><i class="bi bi-chevron-down"></i></span>
+                                </p>
+                            </div>
+                            <div id="drop-8" class="collapse" aria-labelledby="faqHeading1" data-parent="#accord-8">
+                                <div class="card-body py-4 mt-3 mb-3">
+                                    If you encounter technical issues while using myPUPQC,please contact the <a href="https://www.facebook.com/srg.pupqc">Software Research Group</a> or coordinate with Prof. Demelyn Monzon at academic office of PUPQC Miserior Building.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('#faqAccordion').on('show.bs.collapse', function (e) {
+                        $(e.currentTarget).find('.collapse.show').collapse('hide');
+                    });
+            
+                    $('.collapse').on('show.bs.collapse', function (e) {
+                        $(this).prev('.faq-header').addClass('active');
+                    }).on('hide.bs.collapse', function (e) {
+                        $(this).prev('.faq-header').removeClass('active');
+                    });
                 });
-            });
-        </script>
+            </script>
+            
+
+        </div>
     </section>

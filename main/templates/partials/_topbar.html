@@ -1,16 +1,19 @@
 {% load static %}
-        <div class="container d-flex align-items-center">
-            <h1 class="logo me-auto">
-                <a href="{% url 'index' %}">
-                    <img src="{% static 'img/myPUPQC.png' %}" alt="Iskonect">
-                </a>
-            </h1>
+    <div class="container d-flex align-items-center">
+        <h1 class="logo me-auto">
+            <a href="#section_home">
+                <img src="{% static 'img/myPUPQC.png' %}" alt="Iskonect">
+            </a>
+        </h1>
+        <header>
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a href="#section_about"">About</a></li>
-                    <li><a href="#section_services">Services</a></li>
-                    <li><a href="#section_faqs">FAQs</a></li>
-                    <li><a href="#section_contact">Contact us</a></li>
+                    <li><a href="#section_home"     class="fw-bold active" id="sct-h">Home</a></li>
+                    <li><a href="#section_about"    class="fw-bold" id="sct-a">About</a></li>
+                    <li><a href="#section_services" class="fw-bold" id="sct-s">Services</a></li>
+                    <li><a href="#section_faqs"     class="fw-bold" id="sct-f">FAQs</a></li>
+                    <li><a href="#section_contact"  class="fw-bold" id="sct-c">Contact us</a></li>
                 </ul>
             </nav>
-        </div>
+        </header>
+    </div>    

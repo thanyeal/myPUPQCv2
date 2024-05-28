@@ -1,28 +1,28 @@
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="{% static 'img/myPUPQCico.png' %}">
-    <title>myPUPQC</title>
+        <link rel="icon" href="{% static 'img/myPUPQCico.png' %}">
+        <title>myPUPQC</title>
 
-    {% include 'partials/_css.html' %}
+        {% include 'partials/_css.html' %}
 
-</head>
-<body>
-    <header id="header" class="fixed-top">
-        {% include 'partials/_topbar.html' %}
-    </header>
+    </head>
+    <body>
+        <header id="header" class="fixed-top">
+            {% include 'partials/_topbar.html' %}
+        </header>
 
-    <main id="main" class="py-4">
-        {% block content  %}{% endblock  %}
-    </main>
+        <main id="main" class="py-4">
+            {% block content  %}{% endblock  %}
+        </main>
 
-    {% include 'partials/_footer.html' %}
+        {% include 'partials/_footer.html' %}
 
-    {% include 'partials/_js.html' %}
+        {% include 'partials/_js.html' %}
 
-    {% include 'partials/_gzfoot.html' %}
-</body>
+        {% include 'partials/_gzfoot.html' %}
+    </body>
 </html>
