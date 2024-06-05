@@ -1,0 +1,23 @@
+
+
+.carousel-indicators button {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #000; /* Change color as needed */
+}
+.carousel-indicators .active {
+    background-color: #fff; /* Change color as needed */
+}
+
+.indexCarousel .carousel-control-prev, .carousel-control-next {
+    width: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.indexCarousel .carousel-control-prev-icon,
+.indexCarousel .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}

@@ -4,10 +4,35 @@
         <div class="about mt-4 py-4">
             <div class="container" data-aos="fade-up">
                 <div class="row">
-                    <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-                        <img src="{% static 'img/about.jpg' %}" class="img-fluid" alt="">
+                    <div class="col-lg-6 order-1 order-lg-2 align-content-center" data-aos="fade-left" data-aos-delay="100">
+                        <div id="aboutCarousel" class="carousel slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                {% comment %} <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button> {% endcomment %}
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <img src="{% static 'about/PUP.png' %}" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                <img src="{% static 'about/PUP2.jpg' %}" class="d-block w-100" alt="...">
+                                </div>
+                                {% comment %} <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="...">
+                                </div> {% endcomment %}
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content-center">
                         <h3>myPUPQC: A unified portal for all Iskolar ng Bayan</h3>
                         <p class="mt-7">
                             myPUPQC is a dedicated portal designed to provide university assistance at Polytechnic University of the Philippines - Quezon City Campus. It caters to administrative officers, university faculty, and all Iskolar ng Bayan. myPUPQC offers an integrated platform to accommodate your academic and administrative needs. From intuitive faculty and class scheduling to various overarching admin and faculty information systems, our goal is to enhance your university experience with efficiency and ease.
