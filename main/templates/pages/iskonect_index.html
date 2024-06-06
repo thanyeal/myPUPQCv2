@@ -3,9 +3,9 @@
 <section id="section_home" class="pt-0">
     <div id="indexCarousel" class="carousel slide d-flex justify-content-center">
         <div class="carousel-indicators">
-                <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="0" class="live active rounded-circle" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="1" class="live rounded-circle"aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="2" class="live rounded-circle"aria-label="Slide 3"></button>
         </div>
 
         <div id="hero" class="d-flex justify-content-center align-items-center px-5">
@@ -27,7 +27,14 @@
                     </div>
                 </div>
             </div>
-
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var myCarousel = new bootstrap.Carousel('#indexCarousel', {
+                        interval: 2000, // 2 seconds
+                        ride: 'carousel'
+                    });
+                });
+            </script>
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#indexCarousel" data-bs-slide="prev">

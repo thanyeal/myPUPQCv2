@@ -5,22 +5,34 @@
             <div class="container" data-aos="fade-up">
                 <div class="row">
                     <div class="col-lg-6 order-1 order-lg-2 align-content-center" data-aos="fade-left" data-aos-delay="100">
-                        <div id="aboutCarousel" class="carousel slide">
+                        <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <style>
+                                .carousel-indicators button {
+                                    width: 10px !important;
+                                    height: 10px !important;
+                                    border-radius:50% !important;
+                                }
+                                .carousel-indicators .live {
+                                    background-color: transparent;
+                                    opacity: 1;
+                                    border: 1px solid white;
+                                }
+                                .carousel-indicators .active {
+                                    background-color: #fff;
+                                }
+                            </style>
                             <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="live active rounded-circle" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1" class="live rounded-circle" aria-label="Slide 2"></button>
                                 {% comment %} <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button> {% endcomment %}
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                <img src="{% static 'about/PUP.png' %}" class="d-block w-100" alt="...">
+                                    <img src="{% static 'about/PUP.png' %}" class="d-block w-100" alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                <img src="{% static 'about/PUP2.jpg' %}" class="d-block w-100" alt="...">
+                                    <img src="{% static 'about/PUP2.jpg' %}" class="d-block w-100" alt="...">
                                 </div>
-                                {% comment %} <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
-                                </div> {% endcomment %}
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -31,6 +43,14 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                var myCarousel = new bootstrap.Carousel('#aboutCarousel', {
+                                    interval: 2000, // 2 seconds
+                                    ride: 'carousel'
+                                });
+                            });
+                        </script>
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content-center">
                         <h3>myPUPQC: A unified portal for all Iskolar ng Bayan</h3>

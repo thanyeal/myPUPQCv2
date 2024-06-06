@@ -10,7 +10,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Outfit", sans-serif;;
+  font-family: "Outfit", sans-serif;
   color: #444444;
 }
 
@@ -692,11 +692,13 @@ p {
   background: #fff;
   padding: 40px 30px;
   width: 100%;
+  border: 1px solid #eef0ef;
 }
 
-/* .why-us .icon-box:hover {
-  
-} */
+.why-us .icon-box:hover {
+  border-color: #800000;
+
+}
 
 .why-us .icon-boxes .icon-box i {
   font-size: 32px;
@@ -730,7 +732,7 @@ p {
   align-items: center;
   padding: 20px;
   transition: 0.3s;
-  /* border: 1px solid #eef0ef; */
+  border: 1px solid #eef0ef;
 }
 
 .features .icon-box i {
@@ -753,7 +755,7 @@ p {
 }
 
 .features .icon-box:hover {
-  /* border-color: #800000; */
+  border-color: #800000;
 }
 
 .features .icon-box:hover h3 a {

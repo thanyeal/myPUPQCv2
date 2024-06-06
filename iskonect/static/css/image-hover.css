@@ -12,9 +12,9 @@
 .icon-box .service-image {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
-    border: 10px solid #700; 
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 100%;
+    border: 2px solid #700; 
+    transition: 0.3s;
 }
 
 .icon-box.acmis:hover .service-image {
@@ -59,7 +59,9 @@
 .icon-box .contact-image {
     width: 100px;
     height: 100px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 100%;
+    border: 0.2rem solid #700; 
+    transition: 0.3s;
 }
 .icon-box.location:hover .contact-image {
     content: url("../contacts/location_hover.png");
