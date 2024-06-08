@@ -17,11 +17,12 @@
     transition: 0.3s;
 }
 
-.icon-box.acmis:hover .service-image {
+.acmis .service-image:hover {
     content: url("../services/ACCRED.png");
-    
+    transform: scale(1.1);
+
 }
-.icon-box.apms:hover .service-image {
+.apms .service-image:hover {
     content: url("../services/APMSs.png");
     
 }
